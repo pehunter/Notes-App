@@ -2,7 +2,11 @@ import Card from './Card'
 
 function Cards(props) {
     return (<>
-    {props.notes.map((note) => <Card title={note.title} color={note.color}></Card>)}
+    {props.notes.map((note) => <Card 
+    card={note}
+    removeCard={props.removeCard} 
+    switchColor={props.switchColor}
+    switchText={props.switchText}></Card>)}
     </>);
 }
 
