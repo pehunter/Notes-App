@@ -1,5 +1,5 @@
 import {GrClose, GrPaint} from 'react-icons/gr'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 let colors = {
     "red": "#FFB2B2",
@@ -16,6 +16,7 @@ const Card = ({card = {id: 0, title: "", color: "yellow"}, removeCard = () => {}
     function changed(e) {
         setText(e.target.value)
     }
+
     return (
         <div className="card" style={{
             backgroundColor: colors[card.color]
